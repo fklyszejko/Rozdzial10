@@ -11,7 +11,7 @@ public class Product
     [StringLength(40)]
     public string ProductName { get; set; } = null!;
 
-    [Column("UnitPrice", TypeName ="money") ]
+    [Column("UnitPrice", TypeName = "money")]
     public decimal? Koszt { get; set; } // nazwa właściwości != nazwa kolumny
 
     [Column("UnitsInStock")]
@@ -19,4 +19,8 @@ public class Product
 
     public bool Discontinued { get; set; }
 
-    // te dwie właściwości 
+    // te dwie właściwości definiują relację tej tabeli
+    // z tabelą Categories
+    public int CategoryID { get; set; }
+    public virtual Category Category { get; set; } = null!;
+}

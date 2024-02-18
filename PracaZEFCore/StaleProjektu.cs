@@ -2,5 +2,5 @@
 
 public class StaleProjektu
 {
-    public const string DostawcaDanych = "SQLite"; // lub SQLServer
+    public const string DostawcaDanych = "SQLServer"; // lub SQLServer
 }
